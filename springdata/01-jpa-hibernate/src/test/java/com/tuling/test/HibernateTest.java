@@ -88,7 +88,7 @@ public class HibernateTest {
             Transaction tx = session.beginTransaction();
 
             Customer customer = new Customer();
-            //customer.setCustId(1L);
+            customer.setCustId(1L);
             customer.setCustName("徐庶");
 
             // 插入session.save()
