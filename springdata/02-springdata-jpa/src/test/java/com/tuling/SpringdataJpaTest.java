@@ -28,15 +28,13 @@ public class SpringdataJpaTest {
 
     @Test
     public  void testR(){
-        Optional<Customer> byId = repository.findById(20L);
+        Optional<Customer> byId = repository.findById(1L);
 
         System.out.println(byId.orElse(null));
     }
 
     @Test
     public  void testC(){
-
-
         Customer customer = new Customer();
         customer.setCustName("李四");
 
@@ -45,8 +43,6 @@ public class SpringdataJpaTest {
 
     @Test
     public  void testD(){
-
-
         Customer customer = new Customer();
         customer.setCustId(3L);
         customer.setCustName("李四");
@@ -57,10 +53,7 @@ public class SpringdataJpaTest {
 
     @Test
     public  void testFindAll(){
-
-
         Iterable<Customer> allById = repository.findAllById(Arrays.asList(1L, 7L, 8L));
-
         System.out.println(allById);
     }
 
