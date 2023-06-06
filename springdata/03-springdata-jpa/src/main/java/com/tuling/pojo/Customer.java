@@ -18,7 +18,7 @@ import java.util.Set;
  * @Slogan 致敬大师，致敬未来的你
  */
 @Entity     // 作为hibernate 实体类
-@Table(name = "tb_customer")       // 映射的表明
+@Table(name = "tb_customer_1")       // 映射的表
 @Data
 @EntityListeners(AuditingEntityListener.class)
 public class Customer {
@@ -49,7 +49,7 @@ public class Customer {
           一旦把关联的数据设置null ，或者修改为其他的关联数据， 如果想删除关联数据， 就可以设置true
       optional  限制关联的对象不能为null
             true 可以为null(默认 ) false 不能为null
-      mappedBy  将外键约束执行另一方维护(通常在双向关联关系中，会放弃一方的外键约束）
+      mappedBy  将外键约束指向另一方维护(通常在双向关联关系中，会放弃一方的外键约束）
         值= 另一方关联属性名
     **/
     @OneToOne(mappedBy = "customer",

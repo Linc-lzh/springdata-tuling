@@ -61,7 +61,7 @@ public class ManyToOneTest {
     @Test
     public void testD(){
         Customer customer = new Customer();
-        customer.setCustId(1L);
+        customer.setCustId(2L);
 
         List<Message> messages = repository.findByCustomer(customer);
 

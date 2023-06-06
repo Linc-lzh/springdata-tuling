@@ -60,7 +60,7 @@ public class ManyToManyTest {
     public void testR() {
 
 
-        System.out.println(repository.findById(14L));
+        System.out.println(repository.findById(4L));
 
         //repository.save(customer);
     }
@@ -79,7 +79,7 @@ public class ManyToManyTest {
     public void testD() {
 
 
-        Optional<Customer> customer = repository.findById(14L);
+        Optional<Customer> customer = repository.findById(3L);
 
         repository.delete(customer.get());
     }
